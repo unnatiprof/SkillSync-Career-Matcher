@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration Form</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #74ebd5, #9face6);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: #fff;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+      width: 100%;
+      max-width: 420px;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    .form-group {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 15px;
+      background: none;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    .form-group input:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 8px rgba(0,123,255,0.3);
+    }
+
+    .form-group label {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: #fff;
+      color: #777;
+      padding: 0 5px;
+      pointer-events: none;
+      transition: 0.3s;
+    }
+
+    .form-group input:focus + label,
+    .form-group input:not(:placeholder-shown) + label {
+      top: -8px;
+      left: 10px;
+      font-size: 12px;
+      color: #007bff;
+    }
+
+    /* Skills chip box */
+    .skills-box {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 6px;
+      min-height: 48px;
+      cursor: text;
+    }
+
+    .skills-box input {
+      border: none;
+      outline: none;
+      flex: 1;
+      font-size: 15px;
+      padding: 6px;
+      min-width: 100px;
+    }
+
+    .chip {
+      background: #007bff;
+      color: #fff;
+      padding: 6px 10px;
+      margin: 4px;
+      border-radius: 16px;
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      animation: fadeIn 0.3s ease-in-out;
+    }
+
+    .chip span {
+      margin-left: 8px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: scale(0.8);}
+      to {opacity: 1; transform: scale(1);}
+    }
+
+    .btn {
+      width: 100%;
+      padding: 14px;
+      border: none;
+      border-radius: 8px;
+      background: #007bff;
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #0056b3;
+      transform: scale(1.02);
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 20px;
+        border-radius: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Register</h2>
+    <form action="register" method="post" id="registerForm">
+      <div class="form-group">
+        <input type="text" id="username" placeholder=" " required name="Username">
+        <label for="username">Username</label>
+      </div>
+
+      <div class="form-group">
+        <input type="text" id="fullname" placeholder=" " required name="Full_Name">
+        <label for="fullname">Full Name</label>
+      </div>
+
+<div class="form-group">
+        <input type="text" id="role" placeholder=" " required name="Role">
+        <label for="role">Role</label>
+      </div>
+      
+      <div class="form-group">
+        <input type="email" id="email" placeholder=" " required name="Email">
+        <label for="email">Email</label>
+      </div>
+
+      <div class="form-group">
+        <input type="tel" id="whatsapp" placeholder=" " pattern="[0-9]{10}" required name="WhatsApp_No" >
+        <label for="whatsapp">WhatsApp No</label>
+      </div>
+      
+      <div class="">
+        <input type="radio" value= "Male" name="Gender" >Male
+        <label> </label>
+      </div>
+      
+      <div class="">
+        <input type="radio" value= "Female" name="Gender" >Female
+        <label> </label>
+      </div><br></br>
+      
+      
+      <!-- Updated Skills Section -->
+      <!--  <div class="form-group">
+        <label style="position: static; font-size:14px; color:#007bff;">Skills</label>
+        <div class="skills-box" id="skillsBox">
+          <input type="text" id="skillInput" placeholder="Type a skill and press Enter" name="skills">
+        </div>
+      </div> -->
+
+      <div class="form-group">
+        <input type="text" id="skills" placeholder=" " required name="Skills">
+        <label for="skills">Skills</label>
+      </div>
+      
+      <div class="form-group">
+        <input type="password" id="password" placeholder=" " required name="Password">
+        <label for="password">Password</label>
+      </div>
+
+      <div class="form-group">
+        <input type="password" id="confirmPassword" placeholder=" " required name="Confirm_Password">
+        <label for="confirmPassword">Confirm Password</label>
+      </div>
+
+      <div class="form-group">
+        <input type="text" id="college" placeholder=" " required name="College">
+        <label for="college">College</label>
+      </div>
+
+      <div class="form-group">
+        <input type="text" id="degree" placeholder=" " required name="Degree">
+        <label for="degree">Degree</label>
+      </div>
+      
+      <div class="form-group">
+        <input type="text" id="city" placeholder=" " required name="City">
+        <label for="city">City</label>
+      </div>
+      
+      <div class="form-group">
+        <input type="text" id="currentprojects" placeholder=" " required name="Current Projects">
+        <label for="currentprojects">Current Projects</label>
+      </div>
+      
+      <div class="form-group">
+        <input type="text" id="currentprojects" placeholder=" " required name="Current Projects">
+        <label for="currentprojects">Current Projects</label>
+      </div>
+      
+      <div class="form-group">
+        <input type="text" id="coursename" placeholder=" " required name="Course Name">
+        <label for="coursename">Course Name</label>
+      </div>
+      
+      <div class="form-group">
+        <input type="text" id="fees" placeholder=" " required name="Fees">
+        <label for="fees">Fees</label>
+      </div>
+      
+      <div class="form-group">
+        <input type="text" id="level" placeholder=" " required name="Level">
+        <label for="level">Level</label>
+      </div>
+      
+      
+      <!--  <div class="form-group">
+        <input type="date" id="startDate" required name="Starting_Date">
+        <label for="startDate">Starting Date</label>
+      </div>
+
+      <div class="form-group">
+        <input type="date" id="endDate" required name="Ending_Date">
+        <label for="endDate">Ending Date</label>
+      </div>-->
+      
+
+      <button type="submit" class="btn">Register</button>
+    </form>
+  </div>
+
+  <!--  <script>
+    const skillsBox = document.getElementById("skillsBox");
+    const skillInput = document.getElementById("skillInput");
+
+    skillInput.addEventListener("keypress", function(event) {
+      if (event.key === "Enter" && skillInput.value.trim() !== "") {
+        event.preventDefault();
+        const skillText = skillInput.value.trim();
+
+        const chip = document.createElement("div");
+        chip.className = "chip";
+        chip.innerHTML = `${skillText} <span>&times;</span>`;
+
+        chip.querySelector("span").addEventListener("click", () => {
+          skillsBox.removeChild(chip);
+        });
+
+        skillsBox.insertBefore(chip, skillInput);
+        skillInput.value = "";
+      }
+    });
+
+    // Collect skills before form submission
+    document.getElementById("registerForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const skills = Array.from(document.querySelectorAll(".chip"))
+        .map(chip => chip.textContent.replace("×", "").trim());
+      alert("Submitted Skills: " + skills.join(", "));
+      // Here you can send 'skills' array along with other form data to backend
+    });
+  </script>-->
+</body>
+</html>

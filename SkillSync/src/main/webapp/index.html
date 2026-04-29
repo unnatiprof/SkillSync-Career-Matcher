@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SkillSync – College Skill Exchange Portal</title>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, sans-serif;
+}
+
+body {
+	background: #fff;
+	color: #1a1a1a;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 20px 60px;
+}
+
+.page-title {
+      text-align:center;
+      margin: 6px 0 32px;
+    }
+    .page-title h1{
+      font-size:48px;
+      color: #08223e;
+      margin-bottom:10px;
+      letter-spacing: -0.02em;
+    }
+    .page-title p{
+      margin:0;
+      color: #627480;
+      font-size:18px;
+    }
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;   /* space between icon and text */
+}
+
+.logo-box {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    background: linear-gradient(135deg,#ffb86b,#7c5cff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 6px 18px rgba(124,92,255,0.18);
+}
+
+.logo-box img {
+    width: 50px;
+    height: 50px;
+}
+
+/* Navbar */
+nav a {
+	margin-left: 20px;
+	text-decoration: none;
+	color: #1a1a1a;
+	font-weight: 500;
+}
+
+/* Hero Section */
+.hero {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 60px;
+}
+
+.hero-text {
+	max-width: 50%;
+}
+
+
+.hero-text h1 {
+	font-size: 36px;
+	color: #1a1a1a;
+	margin-bottom: 20px;
+}
+
+.hero-text p {
+	font-size: 18px;
+	color: #444;
+	margin-bottom: 30px;
+	line-height: 1.6;
+}
+
+.hero-buttons button {
+	padding: 12px 28px;
+	border: none;
+	border-radius: 6px;
+	font-size: 16px;
+	cursor: pointer;
+	margin-right: 15px;
+	font-weight: 600;
+}
+
+.btn-login {
+	background: #2a62f4;
+	color: #fff;
+}
+
+.btn-register {
+	background: #f47b2a;
+	color: #fff;
+}
+
+/* Illustration */
+.hero img {
+	max-width: 380px;
+}
+</style>
+</head>
+<body>
+	<header>
+		<div class="logo">
+    <div class="logo-box">
+        <img src="https://img.icons8.com/color/48/000000/open-book--v2.png" alt="logo">
+    </div>
+    
+    <span style="font-size:20px; font-weight:bold;">SkillSync</span>
+</div>
+		<nav>
+			<a href="login.html">Login</a> <a href="registeruser.html">Register</a>
+		</nav>
+	</header>
+
+	<section class="hero">
+		<div class="hero-text">
+			<h1>
+				SkillSync – A Peer-to-Peer <br> College Skill Exchange Portal
+			</h1>
+			<p>A smart web-based platform where college students can exchange
+				their skills with peers — like a barter system for learning.</p>
+			<div class="hero-buttons">
+				<a href="login.html">
+					<button class="btn-login">Login</button>
+				</a>
+                <a href="registeruser.html">
+				    <button class="btn-register">Register</button>
+				</a>
+			</div>
+		</div>
+
+		<!-- Illustration (you can replace this with your own SVG/PNG) -->
+		<img src="assets/images/Img_SkillSync.png"
+			alt="students illustration">
+	</section>
+</body>
+</html>
